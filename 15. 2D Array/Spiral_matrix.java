@@ -33,31 +33,29 @@ public class Spiral_matrix {
         }
         return list;
     }
-//wrong sol 
-    public static void spiralPrint(int arr[][]) {
-        int rowStart = 0;
-        int rowEnd = arr.length - 1;
-        int colStart = 0;
-        int colEnd = arr[0].length - 1;
-        while (rowEnd >= rowStart) {
-            for (int i = rowStart; i <= rowEnd; i++) {
-                System.out.print(arr[rowStart][i] + " ");
-            }
-            colStart++;
-            for (int i = colStart; i <= colEnd; i++) {
-                System.out.print(arr[i][colEnd] + " ");
-            }
-            rowEnd--;
-            for (int i = rowEnd; i >= rowStart; i--) {
-                System.out.print(arr[rowEnd + 1][i] + " ");
-            }
-            colEnd--;
-            for (int i = colEnd; i >= colStart; i--) {
-                System.out.print(arr[i][rowStart] + " ");
-            }
-            rowStart++;
+
+public static void printSpiral(int arr[][]){
+    int sr= 0,sc=0,er=arr.length-1,ec=arr[0].length-1;
+
+    while (sc<=ec) {
+        for(int i = sc;i<=ec;i++){
+            System.out.print(arr[sr][i]+" ");
         }
+        sr++;
+        for(int i =sr;i<=er;i++){
+            System.out.print(arr[i][ec]+" ");
+        }
+        ec--;
+        for(int  i = ec;i>=sc;i--){
+            System.out.print(arr[er][i]+" ");
+        }
+        er--;
+        for(int i =er;i>=sr;i--){
+            System.out.print(arr[i][sc]+" ");
+        }
+        sc++;
     }
+}
 
     public static void main(String[] args) {
         int arr[][] = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }};
