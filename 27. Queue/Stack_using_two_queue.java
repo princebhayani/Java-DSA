@@ -2,6 +2,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Stack_using_two_queue {
+    //push -O(1)
+    //pop  -O(n)
+    //peek  -O(n)
+
     static class Stack {
         static Queue<Integer> q1 = new LinkedList<>();
         static Queue<Integer> q2 = new LinkedList<>();
