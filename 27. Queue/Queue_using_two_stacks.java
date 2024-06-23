@@ -1,6 +1,9 @@
 import java.util.Stack;
 
 public class Queue_using_two_stacks {
+     // add/push -O(n)
+    // pop -O(1)
+    // peek -O(1)
     static class Queue {
         static Stack<Integer> s1 = new Stack<>();
         static Stack<Integer> s2 = new Stack<>();
