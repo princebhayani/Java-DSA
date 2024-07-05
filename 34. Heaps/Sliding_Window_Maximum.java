@@ -15,8 +15,10 @@ public class Sliding_Window_Maximum {
         }
     }
     public static void main(String[] args) {
-        int arr[] = {1,3,-1,-3,5,3,6,7};
-        int k =3;
+        int arr[] = {1,-1};
+        // int arr[] = {1,3,-1,-3,5,3,6,7};
+        // int k =3;
+        int k =1;
         int res[] = new int[arr.length-k+1];
 
         PriorityQueue<Pair> pq = new PriorityQueue<>();
